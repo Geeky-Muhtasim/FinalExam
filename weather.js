@@ -77,19 +77,15 @@ function getWeather(city) {
 
             const weatherImage = document.querySelector('.weatherImage');
             if (weather.includes('rain')) {
-                weatherImage.src = 'rain_image.jpg';
+                weatherImage.src = 'images/rainy.png';
             } else if (weather.includes('clear')) {
-                weatherImage.src = 'clear_image.jpg';
+                weatherImage.src = 'images/sunny.png';
             } else if (weather.includes('cloud')) {
-                weatherImage.src = 'cloud_image.jpg';
+                weatherImage.src = 'images/cloud.png';
             } else {
-                weatherImage.src = 'default_image.jpg';
+                weatherImage.src = 'images/sunny.png';
             }
         });
-        // .catch(error => {
-        //     console.log('Error fetching data:', error);
-        //     alert('Error fetching weather data. Please try again.');
-        // });
 }
 
 document.querySelector('.cityButton').addEventListener('click', () => {
