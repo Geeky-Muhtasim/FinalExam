@@ -60,11 +60,36 @@ function getWeather(city) {
             document.querySelector('.humidity5').innerHTML=data.list[30].main.humidity + " %";
             document.querySelector('.pressure5').innerHTML=data.list[30].main.pressure + " Nm^-2";
             document.querySelector('.windSpeed5').innerHTML=data.list[30].wind.speed + " km/h";
-        })
-        .catch(error => {
-            console.log('Error fetching data:', error);
-            alert('Error fetching weather data. Please try again.');
+
+
+            const weather = data.list[0].weather[0].main.toLowerCase();
+            const weatherBox = document.querySelector('.weatherBox');
+
+            if (weather.includes('rain')) {
+                weatherBox.style.background = 'linear-gradient(to bottom, #5C5C5C, #999999)';
+            } else if (weather.includes('clear')) {
+                weatherBox.style.background = 'linear-gradient(to bottom, #4CA1AF, #C4E0E5)';
+            } else if (weather.includes('cloud')) {
+                weatherBox.style.background = 'linear-gradient(to bottom, #6B7AA1, #8E9EBC)';
+            } else {
+                weatherBox.style.background = 'linear-gradient(to bottom, #CCCCCC, #FFFFFF)';
+            }
+
+            const weatherImage = document.querySelector('.weatherImage');
+            if (weather.includes('rain')) {
+                weatherImage.src = 'rain_image.jpg';
+            } else if (weather.includes('clear')) {
+                weatherImage.src = 'clear_image.jpg';
+            } else if (weather.includes('cloud')) {
+                weatherImage.src = 'cloud_image.jpg';
+            } else {
+                weatherImage.src = 'default_image.jpg';
+            }
         });
+        // .catch(error => {
+        //     console.log('Error fetching data:', error);
+        //     alert('Error fetching weather data. Please try again.');
+        // });
 }
 
 document.querySelector('.cityButton').addEventListener('click', () => {
