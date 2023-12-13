@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    /* background: url(../images/background.jpg); */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -10,11 +11,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-image: url(../images/background.jpg);
+}
 
 .title h1{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    color: #f1f1f1;
 }
 
 .weatherBox{
@@ -92,8 +97,8 @@
 
 .weatherBox .weatherInfos .details span{
     font-size: 16px;
-    font-weight: 300;
-    color:aquamarine;
+    font-weight: 600;
+    color:black;
 }
 .weatherBox .nextDatas{
     width: 100%;
@@ -112,7 +117,7 @@
 
 .weatherBox .nextDatas .day h2{
     font-size: 15px;
-    color: cyan;
+    color: Black;
     padding-bottom: 15px;
 }
 

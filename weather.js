@@ -81,7 +81,7 @@ function getWeather(city) {
             } else if (weather.includes('clear')) {
                 weatherImage.src = 'images/sunny.png';
             } else if (weather.includes('cloud')) {
-                weatherImage.src = 'images/cloud.png';
+                weatherImage.src = 'images/cloudy.png';
             } else {
                 weatherImage.src = 'images/sunny.png';
             }
