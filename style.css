@@ -2,3 +2,145 @@
     margin: 0;
     padding: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.title h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.weatherBox{
+    /* margin-top: 100px; */
+    text-align: center;
+    width: 80%;
+    background: black;
+    background-size:cover;
+    color: white;
+    padding:30px;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.weatherBox .search{
+    padding-bottom: 30px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherBox .search input{
+    border: 0;
+    outline: 0;
+    flex:1;
+    margin-right: 10px;
+    font-style: 18px;
+    background: #f1f1f1;
+    color: black;
+}
+
+.weatherBox .search button{
+    border:0;
+    outline: 0;
+    border-radius: 10px;
+}
+
+.weatherBox .allWeather{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+.weatherBox .weatherInfos{
+    width: 40%;
+}
+.weatherBox .weatherInfos .city{
+    font-size: 40px;
+} 
+.weatherBox .weatherInfos h3{
+    font-size: 30px;
+}
+.weatherBox .weatherInfos h3 span{
+    font-size: 50px;
+    font-weight: 600;
+    color: orange;
+    position: relative;
+    /* margin-bottom: 0px; */
+}
+
+
+.weatherBox .weatherInfos .details{
+    font-size: 18px;
+    padding: 15px;
+}
+
+.weatherBox .weatherInfos .details span{
+    font-size: 16px;
+    font-weight: 300;
+    color:aquamarine;
+}
+.weatherBox .nextDatas{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.weatherBox .nextDatas .day{
+    width: 30%;
+    border-radius: 15px;
+    border: 1px solid #f1f1f1;
+    padding: 15px 0;
+    margin: 10px 0;
+}
+
+.weatherBox .nextDatas .day h2{
+    font-size: 15px;
+    color: cyan;
+    padding-bottom: 15px;
+}
+
+.weatherBox .nextDatas .day h3{
+    font-size: 18px;
+}
+
+.weatherBox .nextDatas .day h3 span{
+color: orange;
+font-size: 25px;
+padding: 10px;
+}
+
+.weatherBox .nextDatas .day h4{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.weatherBox .nextDatas .day .details{
+    font-size: 13px;
+}
+
+.weatherBox .nextDatas .day .details p span{
+    font-size: 10px;
+    font-style: italic;
+}
+
+/* 
+.weatherBox .nextDatas .day{
+    width: 30%;
+} */
